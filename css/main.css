@@ -1,0 +1,1174 @@
+/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio, canvas, iframe, img, svg, video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   BodyCurry
+   Ankit Patil
+   The Banana Design Company
+   ========================================================================== */
+
+
+/* Global */
+
+body {
+    position: relative;
+    color: #404040;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url('../font/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'), url('../font/AvenirNextLTPro-Regular.otf') format('opentype'), url('../font/AvenirNextLTPro-Regular.woff') format('woff'), url('../font/AvenirNextLTPro-Regular.ttf') format('truetype'), url('../font/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir';
+    src: url('../font/AvenirNextLTPro-Bold.eot?#iefix') format('embedded-opentype'), url('../font/AvenirNextLTPro-Bold.otf') format('opentype'), url('../font/AvenirNextLTPro-Bold.woff') format('woff'), url('../font/AvenirNextLTPro-Bold.ttf') format('truetype'), url('../font/AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+.bullets {
+    position: fixed;
+    right: 30px;
+    top: 50%;
+    margin-top: -70px;
+    z-index: 1;
+}
+.bullets ul {
+    list-style-type: none;
+    margin: 0;
+}
+.bullets ul li {
+    line-height: 0;
+}
+.bullets ul li a {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    padding: 0;
+    border-radius: 50%;
+    border: 2px solid #FFF;
+    -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.75);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.75) 100%);
+    -webkit-transition: background .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: background .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.bullets ul li.active a {
+    background: #FFF;
+}
+.bullets ul li span {
+    height: 35px;
+    width: 1px;
+    background: #CCC;
+    display: block;
+    margin-left: 4px;
+}
+.success-message {
+    position: fixed;
+    font-family: 'Avenir';
+    width: 100%;
+    top: 0;
+    background: #f38535;
+    color: #FFF;
+    padding: 15px;
+    z-index: 9999;
+    display: none;
+    opacity: 0;
+}
+.success-message:hover {
+    color: #FFF;
+    text-decoration: none;
+}
+.success-message span {
+    margin-right: 12px;
+    -webkit-transition: color .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: color .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+.success-message:hover span {
+    color: #FF0000;
+}
+.touch-sticky, .touch-sticky:visited, .touch-sticky:hover {
+    position: fixed;
+    font-family: 'Avenir';
+    width: 100%;
+    text-align: center;
+    line-height: 48px;
+    text-transform: uppercase;
+    text-decoration: none;
+    bottom: 0;
+    background: #2e548b;
+    color: #FFF;
+    z-index: 9999;
+}
+
+/* Landing section */
+
+#landing {
+    background: url('../img/body-curry-bg.jpg') no-repeat;
+    background-position: center 0px;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: table;
+    position: relative;
+}
+#landing .touch {
+    position: absolute;
+    font-family: 'Avenir';
+    right: 30px;
+    top: 30px;
+    display: block;
+    text-transform: uppercase;
+    border: 2px solid #FFF;
+    color: #FFF;
+    text-decoration: none;
+    overflow: hidden;
+    padding: 18px 18px 16px 18px;
+    -webkit-transition: -webkit-transform .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-font-smoothing: antialiased;
+    animation-delay: 3s;
+}
+#landing .touch:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+}
+#landing .touch span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    left: -138px;
+    top: 0;
+    -webkit-transition: left .30s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: left .30s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#landing .touch:hover span {
+    left: 0;
+}
+#landing .content {
+    width: 555px;
+    max-width: 100%;
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+#landing .logo {
+    width: 165px;
+    height: auto;
+    margin-bottom: 60px;
+    margin-top: -90px;
+    animation-delay: 300ms;
+}
+#landing h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 60px;
+    color: #FFF;
+    animation-delay: 600ms;
+    -webkit-font-smoothing: antialiased;
+}
+#landing p {
+    font-family: 'Avenir';
+    font-size: 20px;
+    color: #FFF;
+    animation-delay: 600ms;
+    -webkit-font-smoothing: antialiased;
+}
+#landing p:nth-of-type(2) {
+    font-weight: bold;
+    margin: 30px 0;
+    animation-delay: 900ms;
+}
+#landing p:last-child {
+  font-size: 13px;
+  letter-spacing: 1px;
+  animation-delay: 1200ms;
+}
+#landing .scroll {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 13px;
+    color: #FFF;
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    margin-left: -37px;
+    text-decoration: none;
+    -webkit-transition: -webkit-transform .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-font-smoothing: antialiased;
+    animation-delay: 4.5s;
+}
+#landing .scroll:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+#landing .scroll img {
+    width: 9px;
+    height: 12px;
+    margin-left: 6px;
+    -webkit-transition: -webkit-transform .9s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform .9s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#landing .scroll:hover img {
+    -webkit-transform: translateX(-1px) rotateY(180deg);
+    transform: translateX(-1px) rotateY(180deg);
+}
+
+/* Introducing section */
+
+#introducing {
+    position: relative;
+}
+#introducing .back-button {
+    position: relative;
+}
+#introducing .back-button a {
+    position: absolute;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    color: #404040;
+    text-decoration: none;
+    visibility: hidden;
+    -webkit-transition: -webkit-transform .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    font-size: 13px;
+    left: 15px;
+    top: 90px;
+    animation-delay: 1200ms;
+}
+#introducing .back-button a.quick {
+    animation-delay: 0 !important;
+}
+#introducing .back-button a:hover {
+    -webkit-transform: translateX(-5px) scale(1.2);
+    transform: translateX(-5px) scale(1.2);
+}
+#introducing .back-button a img {
+    width: 22px;
+    height: auto;
+    margin-right: 6px;
+    margin-top: -2px;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-transition: margin .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: margin .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#introducing .back-button a:hover img {
+    margin-right: 9px;
+}
+#introducing h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 60px;
+    margin-top: 60px;
+    -webkit-font-smoothing: antialiased;
+}
+#introducing p {
+    font-family: 'Avenir';
+    font-size: 20px;
+    -webkit-font-smoothing: antialiased;
+}
+#introducing .points {
+    margin-top: 60px;
+    margin-bottom: 120px;
+    z-index: 1;
+}
+#introducing .points a {
+    text-decoration: none;
+    color: #404040;
+}
+#introducing .points .icon {
+    font-family: 'Avenir';
+    font-size: 20px;
+    display: inline-block;
+    vertical-align: top;
+}
+#introducing .points .icon span {
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 50%;
+    border-top-left-radius: 0;
+    width: 60px;
+    height: 60px;
+    padding: 13px 22px 16px 18px;
+    background: #2e548b;
+    background: -moz-linear-gradient(top, #2e548b 0%, #f38535 100%);
+    background: -webkit-linear-gradient(top, #2e548b 0%, #f38535 100%);
+    background: linear-gradient(to bottom, #2e548b 0%, #f38535 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e548b', endColorstr='#f38535', GradientType=0);
+    animation-delay: 300ms;
+}
+#introducing .points .icon span img {
+    width: 100%;
+    height: auto;
+}
+#introducing .points .content {
+    display: inline-block;
+    width: calc(100% - 87px);
+    padding-left: 15px;
+    margin-bottom: 75px;
+}
+#introducing .points .content h4 {
+    font-family: 'Avenir';
+    font-size: 19px;
+    font-weight: bold;
+    margin-top: 21px;
+    animation-delay: 300ms;
+    -webkit-font-smoothing: antialiased;
+}
+#introducing .points .content p {
+    font-family: 'Avenir';
+    font-size: 14px;
+    animation-delay: 300ms;
+}
+#introducing .points .content span {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 13px;
+    float: right;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: -webkit-transform .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: transform .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    animation-delay: 1s;
+}
+#introducing .points .content span.quick {
+    animation-delay: 0 !important;
+}
+#introducing .points a:hover .content span {
+    -webkit-transform: translateX(7px) scale(1.12);
+    transform: translateX(7px) scale(1.12);
+}
+#introducing .points .content span img {
+    height: 22px;
+    width: 22px;
+    margin-left: 6px;
+    -webkit-transition: margin .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: margin .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#introducing .points a:hover .content span img {
+    margin-left: 9px;
+}
+#introducing .boxes {
+    position: absolute;
+    width: 36%;
+    height: auto;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    animation-delay: 1200ms;
+}
+#introducing .boxes.quick {
+    animation-delay: 0 !important;
+}
+#introducing .sanitary, #introducing .dry, #introducing .travel {
+    padding-bottom: 120px;
+    display: none;
+}
+#introducing .sanitary h2, #introducing .dry h2, #introducing .oily h2, #introducing .travel h2 {
+    font-size: 55px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-left: 30px;
+    visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+#introducing .sanitary p, #introducing .dry p, #introducing .oily p, #introducing .travel p {
+    font-size: 14px;
+    padding-right: 30px;
+    padding-left: 30px;
+    visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+#introducing .sanitary div:nth-child(2) p {
+    padding-left: 0;
+}
+#introducing .sanitary img, #introducing .dry img, #introducing .oily img, #introducing .travel img {
+    width: 100%;
+    height: auto;
+    margin: 60px 0 45px;
+    visibility: hidden;
+}
+#introducing .sanitary .sub, #introducing .dry .sub, #introducing .oily .sub, #introducing .travel .sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: 13px;
+    padding-left: 45px;
+    margin-top: -30px;
+    visibility: hidden;
+    animation-delay: 1200ms;
+    -webkit-font-smoothing: antialiased;
+}
+#introducing .sub.quick {
+    animation-delay: 0 !important;
+}
+#introducing .dry {
+    padding-bottom: 135px;
+}
+#introducing .dry .sub, #introducing .oily .sub {
+    margin-top: 90px;
+}
+#introducing .oily {
+    display: none;
+}
+#introducing .oily .sub img {
+    width: 189px;
+    height: auto;
+    margin: -6px 15px 75px -6px;
+}
+#introducing .oily .sub span {
+    vertical-align: bottom;
+    display: inline-block;
+    margin-bottom: 120px;
+}
+#introducing .travel {
+    padding-bottom: 135px;
+}
+#introducing .travel img {
+    margin-bottom: 0;
+}
+#introducing .travel .sub {
+    margin-top: -15px;
+}
+
+/* Who are we section */
+
+#who-are-we {
+    background: rgba(46, 84, 139, .16);
+    background: -moz-linear-gradient(top, rgba(40, 58, 145, .16) 0%, rgba(236, 104, 38, .16) 100%);
+    background: -webkit-linear-gradient(top, rgba(40, 58, 145, .16) 0%, rgba(236, 104, 38, .16) 100%);
+    background: linear-gradient(to bottom, rgba(40, 58, 145, .16) 0%, rgba(236, 104, 38, .16) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e548bFF', endColorstr='#f38535FF', GradientType=0);
+}
+#who-are-we .curve {
+    margin: 45px 0;
+    background: rgba(248, 248, 248, .44);
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    -webkit-box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.15);
+}
+#who-are-we .curve h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 60px;
+    margin-top: 45px;
+    animation-delay: 300ms;
+    -webkit-font-smoothing: antialiased;
+}
+#who-are-we .curve span {
+    display: block;
+    height: 12px;
+    width: 66px;
+    margin: 30px auto 45px;
+    border-top: 1px solid #2D5592;
+    border-bottom: 1px solid #F38835;
+    animation-delay: 450ms;
+}
+#who-are-we .curve p {
+    font-family: 'Avenir';
+    font-size: 18px;
+    padding: 0 150px;
+    margin-bottom: 30px;
+    text-align: justify;
+    animation-delay: 600ms;
+    -webkit-font-smoothing: antialiased;
+}
+#who-are-we .curve .logo {
+    margin: 30px auto 45px;
+    width: 59px;
+    height: auto;
+    animation-delay: 1200ms;
+}
+
+/* FAQ section */
+
+#faq {
+    padding-top: 60px;
+    padding-bottom: 150px;
+}
+#faq h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 60px;
+    -webkit-font-smoothing: antialiased;
+}
+#faq p {
+    font-family: 'Avenir';
+    font-size: 20px;
+    margin-bottom: 90px;
+    -webkit-font-smoothing: antialiased;
+}
+#faq .questions .panel-title a {
+    font-family: 'Avenir';
+    font-weight: bold;
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+}
+#faq .questions .panel-title a span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+    margin-top: -3px;
+    width: 19px;
+    height: 19px;
+    background: url('../img/accordion-plus.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+#faq .questions .active .panel-title a span {
+    background: url('../img/accordion-minus.png') no-repeat center center;
+    background-size: 100% 100%;
+}
+#faq .questions .panel-body {
+    font-family: 'Avenir';
+    font-size: 14px;
+    padding-left: 48px;
+    border-top: 0;
+}
+#faq .contact form input {
+    border-radius: 0;
+    border: 1px solid #292929;
+    font-family: 'Avenir';
+    font-size: 14px;
+    height: 51px;
+    margin-bottom: 21px;
+    -webkit-font-smoothing: antialiased;
+}
+#faq .contact form input[type=number]::-webkit-inner-spin-button, #faq .contact form input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+#faq .contact form input[type="text"]:focus, #faq .contact form input[type="number"]:focus, #faq .contact form input[type="email"]:focus {
+    border-color: rgba(40, 58, 145, 1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(236, 104, 38, 0.6);
+    outline: 0 none;
+}
+#faq .contact form .has-error input {
+    background: rgba(208, 2, 27, 0.08);
+}
+#faq .contact .form-group:not(:last-of-type) {
+    position: relative;
+}
+#faq .contact .form-group span {
+    position: absolute;
+    font-family: 'Avenir';
+    font-size: 14px;
+    color: #ADADAD;
+    display: none;
+    left: 13px;
+    top: 16px;
+    pointer-events: none;
+}
+#faq div.cs-select {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: left;
+    background: #fff;
+    z-index: 100;
+    width: 100%;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#faq div.cs-select:focus {
+    outline: none;
+}
+#faq .cs-select select {
+    display: none;
+}
+#faq .cs-select span {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#faq .cs-select>span {
+    padding-right: 3em;
+}
+#faq .cs-select>span::after {
+    speak: none;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#faq .cs-select>span::after {
+    content: '\25BE';
+    right: 1em;
+}
+#faq .cs-select.cs-active>span::after {
+    -webkit-transform: translateY(-50%) rotate(180deg);
+    transform: translateY(-50%) rotate(180deg);
+}
+#faq div.cs-active {
+    z-index: 200;
+}
+#faq .cs-select .cs-options {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    background: #fff;
+    visibility: hidden;
+    z-index: 10;
+}
+#faq .cs-select.cs-active .cs-options {
+    visibility: visible;
+}
+#faq .cs-select ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#faq .cs-select ul span {
+    padding: 1em;
+}
+#faq .cs-select ul li.cs-focus span {
+    background-color: #ddd;
+}
+#faq .cs-select li.cs-optgroup ul {
+    padding-left: 1em;
+}
+#faq .cs-select li.cs-optgroup>span {
+    cursor: default;
+}
+#faq div.cs-skin-border {
+    background: transparent;
+    font-family: 'Avenir';
+    font-size: 14px;
+    text-transform: uppercase;
+}
+#faq div.cs-skin-border.disabled {
+    background: #EEE;
+    color: rgb(64, 64, 64);
+    pointer-events: none;
+}
+#faq .cs-skin-border>span {
+    border: 1px solid #292929;
+    border-color: inherit;
+    -webkit-transition: background 0.2s, border-color 0.2s;
+    transition: background 0.2s, border-color 0.2s;
+}
+#faq .cs-skin-border>span::after, .cs-skin-border .cs-selected span::after {
+    font-family: 'Glyphicons Halflings';
+    content: "\e252"
+}
+#faq .cs-skin-border ul span::after {
+    content: '';
+    opacity: 0;
+}
+#faq .cs-skin-border .cs-selected span::after {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+#faq .cs-skin-border.cs-active>span {
+    background: #FAFAFA;
+    color: #283A91;
+}
+#faq .cs-skin-border .cs-options {
+    color: #283A91;
+    background: #FAFAFA;
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, visibility 0s 0.2s;
+    transition: opacity 0.2s, visibility 0s 0.2s;
+}
+#faq .cs-skin-border.cs-active .cs-options {
+    opacity: 1;
+    -webkit-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+}
+#faq .cs-skin-border ul span {
+    padding: 1em 2em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+#faq .cs-skin-border .cs-options li span:hover, .cs-skin-border li.cs-focus span {
+    background: #f5f3ec;
+}
+#faq .contact .btn-gradient {
+    display: inline-block;
+    margin-top: 24px;
+    background: #2e548b;
+    background: -moz-linear-gradient(top, #2e548b 0%, #f38535 100%);
+    background: -webkit-linear-gradient(top, #2e548b 0%, #f38535 100%);
+    background: linear-gradient(to bottom, #2e548b 0%, #f38535 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2e548b', endColorstr='#f38535', GradientType=0);
+}
+#faq .contact button {
+    border-radius: 0;
+    border: 0;
+    margin: 2px;
+    font-family: 'Avenir';
+    text-transform: uppercase;
+    padding: 14px 36px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-transition: background .45s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition: background .45s cubic-bezier(0.215, 0.61, 0.355, 1) transform .45s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+#faq .contact button:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+#faq .contact .btn.disabled {
+    opacity: 1;
+    color: #CCC;
+}
+
+/* Footer section */
+
+footer {
+    background: #404040;
+    color: #FFF;
+    font-family: 'Avenir';
+    font-size: 16px;
+    padding-top: 42px;
+    padding-bottom: 42px;
+    -webkit-font-smoothing: antialiased;
+}
+footer a {
+    margin-left: 15px;
+    -webkit-font-smoothing: antialiased;
+}
+footer a img {
+    height: 20px;
+    width: auto;
+}
+
+/* Media Queries */
+
+@media(max-width:1199px) {
+    #introducing .boxes {
+        bottom: 0;
+        width: 30%;
+    }
+    #introducing .sanitary h2, #introducing .dry h2, #introducing .oily h2, #introducing .travel h2 {
+        padding-left: 15px;
+    }
+    #introducing .sanitary p, #introducing .dry p, #introducing .oily p, #introducing .travel p {
+        padding-left: 15px;
+    }
+    #introducing .sanitary .sub, #introducing .dry .sub, #introducing .travel .sub {
+        padding-left: 30px;
+    }
+    #introducing .oily .sub {
+        margin-top: 30px;
+    }
+    #introducing .oily .sub img {
+        width: 120px;
+    }
+}
+@media(max-width:991px) {
+    #landing .logo {
+        margin-bottom: 30px;
+    }
+    #introducing .points .content h4 {
+        font-size: 19px;
+    }
+    #introducing .sanitary .sub, #introducing .dry .sub, #introducing .travel .sub {
+        margin-top: 30px;
+        padding-left: 15px;
+    }
+    #who-are-we .curve {
+        margin: 45px 15px;
+    }
+    #who-are-we .curve h2 {
+        padding-top: 45px;
+    }
+    #who-are-we .curve p {
+        padding: 0 120px;
+    }
+    #faq {
+        padding-bottom: 60px;
+    }
+    #faq p {
+        margin-bottom: 60px;
+    }
+    #faq .questions {
+        margin-bottom: 60px;
+    }
+}
+@media(max-width:767px) {
+    .bullets {
+        right: 15px;
+    }
+    #landing .touch {
+        right: 15px;
+        top: 15px;
+        padding: 12px 12px 9px 12px;
+    }
+    #landing .content {
+        padding: 0 15px;
+    }
+    #landing .logo {
+        width: 90px;
+        margin-bottom: 24px;
+        margin-top: -60px;
+    }
+    #landing h1 {
+        margin-top: 6px;
+        font-size: 30px;
+    }
+    #landing p {
+        font-size: 14px;
+        margin-bottom: 0;
+    }
+    #landing p:last-child {
+      font-size: 10px;
+    }
+    #landing .scroll {
+        bottom: 60px;
+    }
+    #introducing h2 {
+        font-size: 30px;
+    }
+    #introducing p {
+        font-size: 14px;
+    }
+    #introducing .boxes {
+        width: 51%;
+    }
+    #introducing .points .content {
+        margin-bottom: 30px;
+    }
+    #introducing .points .icon {
+        font-size: 14px;
+    }
+    #introducing .points .icon span {
+        width: 36px;
+        height: 36px;
+        padding: 7px 11px 2px 10px;
+    }
+    #introducing .points .content h4 {
+        font-size: 15px;
+        margin-top: 12px;
+    }
+    #introducing .points .content p {
+        font-size: 12px;
+    }
+    #introducing .back-button a {
+        top: 30px;
+    }
+    #introducing .sanitary h2, #introducing .dry h2, #introducing .oily h2, #introducing .travel h2 {
+        font-size: 30px;
+    }
+    #introducing .sanitary p, #introducing .dry p, #introducing .oily p, #introducing .travel p {
+        font-size: 12px;
+    }
+    #who-are-we .curve {
+        border-top-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    #who-are-we .curve h2 {
+        font-size: 30px;
+    }
+    #who-are-we .curve span {
+        height: 6px;
+        width: 36px;
+        margin: 15px auto 30px;
+    }
+    #who-are-we .curve p {
+        padding: 0 15px;
+        font-size: 14px;
+    }
+    #who-are-we .curve .logo {
+        width: 36px;
+        margin-top: 15px;
+    }
+    #faq h2 {
+        font-size: 30px;
+    }
+    #faq p {
+        font-size: 14px;
+    }
+    #faq .questions .panel-title a {
+        font-size: 15px;
+    }
+    #faq .questions .panel-body {
+        font-size: 14px;
+    }
+    footer {
+        padding-bottom: 90px;
+    }
+    footer div, footer .text-right {
+        text-align: center;
+        font-size: 14px;
+    }
+    footer .row div:first-child {
+        margin-bottom: 30px;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+    /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *, *:before, *:after, p:first-letter, div:first-letter, blockquote:first-letter, li:first-letter, p:first-line, div:first-line, blockquote:first-line, li:first-line {
+        background: transparent !important;
+        color: #000 !important;
+        /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+    a, a:visited {
+        text-decoration: underline;
+    }
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]:after, a[href^="javascript:"]:after {
+        content: "";
+    }
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre, blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+    thead {
+        display: table-header-group;
+    }
+    tr, img {
+        page-break-inside: avoid;
+    }
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    h2, h3 {
+        page-break-after: avoid;
+    }
+}

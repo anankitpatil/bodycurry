@@ -1,0 +1,23 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Developer: Ankit Patil
+    Site: ankitpatil.com
+    Twitter: @anankitpatil
+    Location: Pune, India
+
+    Designer: Nihar Manwatkar
+    Site: thebananadesign.co
+    Twitter: @niihar
+    Location: Gurugram, India
+
+# THANKS
+
+    Name: thebananadesign.co
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css
